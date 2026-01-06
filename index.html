@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harapan Baru Timnas Indonesia</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Verdana, sans-serif;
+        background-color: #ffffff;
+        color: #000;
+    }
+
+    .container {
+        width: 900px;
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+    .menu {
+        text-align: center;
+        background-color: #D32F2F;
+        padding: 12px 0;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        margin: 0 15px;
+        transition: color 0.3s;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+        color: #FFCDD2;
+    }
+
+    /* Styling jam digital */
+    #clock {
+        text-align: center;       /* Tengah horizontal */
+        font-size: 16px;
+        font-weight: bold;
+        color: #D32F2F;           /* Warna sama tema */
+        margin-bottom: 20px;      /* Jarak bawah */
+    }
+
+    h2 {
+        text-align: center;
+        color: #D32F2F;
+        margin-bottom: 20px;
+    }
+
+    .foto {
+        float: left;
+        width: 300px;
+        height: 220px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        border: 2px solid #1E3A5F;
+        object-fit: cover;
+    }
+
+    p {
+        text-align: justify;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .footer {
+        text-align: center;
+        background-color: #1E3A5F;
+        color: #fff;
+        font-weight: bold;
+        padding: 14px 0;
+        margin-top: 30px;
+        border-radius: 6px 6px 0 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="HOME.html" class="active">Home</a> |
+        <a href="ABOUT.html">About</a> |
+        <a href="GALLERY.html">Gallery</a> |
+        <a href="CONTACT.html">Contact</a> |
+    </div>
+
+    <!-- Jam Digital -->
+    <div id="clock"></div>
+
+    <h2>Harapan Baru Timnas Indonesia</h2>
+
+    <img src="john-herdman-pelatih-timnas-indonesia-1767451531119_169.jpeg" class="foto" alt="John Herdman">
+
+    <p>
+         Tim Nasional Indonesia kini memasuki babak baru dengan hadirnya pelatih <b>John Herdman</b>, pelatih asal Inggris yang dikenal dengan pendekatan modernnya. Herdman menekankan disiplin, kekompakan tim, serta pengembangan pemain muda, dengan tujuan membangun fondasi jangka panjang agar regenerasi pemain berjalan lancar. Kehadirannya diharapkan mampu meningkatkan kualitas permainan Timnas Indonesia, baik di level senior maupun U-23, sehingga tim bisa lebih kompetitif di kancah Asia dan internasional.
+    </p>
+
+    <p>
+        Selain aspek teknis, Herdman juga menekankan pentingnya kekuatan mental dan karakter pemain. Dengan dukungan penuh dari PSSI, pemain, dan masyarakat, strategi Herdman diharapkan menumbuhkan rasa percaya diri dan kemampuan menghadapi tekanan dalam pertandingan besar. Era baru ini memberi harapan besar bagi Timnas Indonesia untuk kembali bersinar, meraih prestasi di turnamen internasional, dan membangkitkan kebanggaan bagi seluruh bangsa
+    </p>
+
+    <div class="clear"></div> 
+
+</div> 
+
+<!-- Footer -->
+<div class="footer">
+    &copy; 2025 Copyright by Rayhan Ibnu 251011700966
+</div>
+
+<!-- Script JavaScript Jam -->
+<script>
+function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('clock').textContent = `Waktu Saat Ini: ${hours}:${minutes}:${seconds}`;
+}
+
+// Update setiap 1 detik
+setInterval(updateClock, 1000);
+updateClock(); // panggil sekali agar tidak delay 1 detik
+</script>
+
+</body>
+</html>
